@@ -1,0 +1,109 @@
+/* Body & container */
+body {
+  font-family: Georgia;
+  background-color: #add8e6; /* light blue */
+  margin: 0;
+  padding: 20px 0; /* top padding so container is at top */
+  display: flex;
+  justify-content: center; /* center horizontally */
+}
+
+.container {
+  width: 900px;
+  background-color: #ffffff; /* white */
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold; /* all text bold */
+}
+
+/* Heading */
+h1 {
+  color: #000000; /* black */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column; /* each input/button on new line */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #000000; /* black border */
+  border-radius: 5px;
+  background-color: #ffffff; /* white input background */
+  color: #000000; /* input text black */
+  font-weight: bold;
+}
+
+input::placeholder {
+  color: #000000; /* placeholder text black */
+  font-weight: bold;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000000; /* black button */
+  color: #ffffff; /* white text */
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #000000; /* black border */
+  color: #090673; /* text black */
+  background-color: #ffffff; /* white row background */
+  font-weight: bold;
+}
+
+th {
+  background-color: #000000; /* black header */
+  color: #ffffff; /* white header text */
+  font-weight: bold;
+}
+
+/* Action buttons in table */
+button.edit {
+  background-color: #000000;
+  color: #ffffff;
+  margin-right: 10px; /* small gap between Edit and Delete */
+  font-weight: bold;
+}
+
+button.delete {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: bold;
+}
+/* Wrap Edit/Delete buttons */
+.action-buttons {
+  display: flex;
+  gap: 1px; /* gap between Edit and Delete */
+  justify-content: center; /* optional: center in cell */
+}
+
+/* Table buttons */
+button.edit, button.delete {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
