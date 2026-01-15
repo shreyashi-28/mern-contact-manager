@@ -1,8 +1,12 @@
 import React from "react";
 
 const ContactList = ({ contacts, deleteContact, startEdit }) => {
+  if (!contacts || contacts.length === 0) {
+    return <p>No contacts found</p>;
+  }
+
   return (
-    <table border="1" cellPadding="10" cellSpacing="0">
+    <table>
       <thead>
         <tr>
           <th>Name</th>
@@ -12,18 +16,24 @@ const ContactList = ({ contacts, deleteContact, startEdit }) => {
         </tr>
       </thead>
       <tbody>
-        {contacts.map((c) => (
-          <tr key={c._id}>
-            <td>{c.name}</td>
-            <td>{c.email}</td>
-            <td>{c.phone}</td>
+        {contacts.map((contact) => (
+          <tr key={contact._id}>
+            <td>{contact.name}</td>
+            <td>{contact.email}</td>
+            <td>{contact.phone}</td>
             <td>
-        <div className="action-buttons">
-            <button className="edit" onClick={() => editContact(contact._id)}>Edit</button>
-            <button className="delete" onClick={() => deleteContact(contact._id)}>Delete</button>
-        </div>
-        </td>
-
+              <div className="action-buttons">
+                <button className="edit" onClick={() => startEdit(contact)}>
+                  Edit
+                </button>
+                <button
+                  className="delete"
+                  onClick={() => deleteContact(contact._id)}
+                >
+                  Delete
+                </button>
+              </div>
+            </td>
           </tr>
         ))}
       </tbody>
